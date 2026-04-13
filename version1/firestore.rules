@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Events: anyone can read, only authenticated admins can write
+    match /events/{eventId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+
+    // Journeys: anyone can create (public form), only admins can read
+    match /journeys/{journeyId} {
+      allow create: if true;
+      allow read: if request.auth != null;
+    }
+
+    // Registrations: anyone can create (registration form), only admins can read
+    match /registrations/{regId} {
+      allow create: if true;
+      allow read: if request.auth != null;
+    }
+  }
+}
