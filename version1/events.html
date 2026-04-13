@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Big O Minds Events – Explore purposeful workshops, coaching programs, and transformative experiences." />
+  <meta name="theme-color" content="#7ba7bc" />
+  <title>Events – Big "O" Minds</title>
+  <link rel="icon" type="image/png" href="assets/logo1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════ HEADER ══════════════════════════ -->
+  <header id="header" class="site-header scrolled" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Big O Minds Home">
+        <img src="assets/logo1.png" alt="Big O Minds" class="header-logo-img" />
+        <div class="brand-name">
+          <span class="brand-big">Big </span><span class="brand-o">"O"</span><span class="brand-big"> Minds</span>
+        </div>
+      </a>
+      <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="events.html" class="nav-link" style="color:var(--clr-blue-dk);background:var(--clr-blue-bg)">Events</a>
+        <a href="turning-point.html" class="nav-link">Turning Point</a>
+        <a href="index.html#contact" class="nav-link nav-cta">Let's Talk</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+    <div class="mobile-circle-bg"></div>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="index.html#services" class="mobile-nav-link">Services</a>
+      <a href="events.html" class="mobile-nav-link">Events</a>
+      <a href="turning-point.html" class="mobile-nav-link">Turning Point</a>
+      <a href="index.html#contact" class="mobile-nav-link">Let's Talk</a>
+    </nav>
+  </div>
+
+  <!-- ══════════════════════════ EVENTS PAGE ══════════════════════════ -->
+  <main class="ev-main">
+    <div class="ev-bg-circles" aria-hidden="true">
+      <div class="ev-bg-circle ev-c1"></div>
+      <div class="ev-bg-circle ev-c2"></div>
+    </div>
+
+    <div class="container">
+      <!-- Events List View -->
+      <div id="evListView">
+        <div class="section-header" style="padding-top:clamp(7rem,10vw,9rem)">
+          <p class="section-eyebrow">Upcoming Experiences</p>
+          <h1 class="section-heading">Purposeful Moments<br/><em>Await You</em></h1>
+          <p class="section-sub">Each event is designed to be immersive, joyful, and gently transformative. Find the one that calls to you.</p>
+        </div>
+
+        <div class="ev-grid" id="evGrid">
+          <!-- Events injected by JS -->
+        </div>
+
+        <div class="ev-empty" id="evEmpty" style="display:none;">
+          <div class="ev-empty-circle">◎</div>
+          <h3>New experiences are being crafted</h3>
+          <p>Check back soon for upcoming workshops, coaching programs, and transformative events.</p>
+        </div>
+      </div>
+
+      <!-- Event Detail View -->
+      <div id="evDetailView" style="display:none;">
+        <button class="tp-back ev-back-btn" id="evBackBtn">
+          <span>←</span> Back to Events
+        </button>
+        <div class="ev-detail" id="evDetail">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- Registration Modal -->
+      <div class="ev-modal-overlay" id="evModalOverlay" style="display:none;">
+        <div class="ev-modal" id="evModal">
+          <button class="ev-modal-close" id="evModalClose" aria-label="Close">✕</button>
+
+          <!-- Register Form -->
+          <div id="evRegisterForm">
+            <div class="ev-modal-header">
+              <div class="ev-modal-circle">◎</div>
+              <h3 class="ev-modal-title">Register for Event</h3>
+              <p class="ev-modal-event-name" id="evModalEventName"></p>
+            </div>
+            <form id="evForm" novalidate>
+              <div class="form-group">
+                <label for="regName">Full Name</label>
+                <input type="text" id="regName" placeholder="e.g. Priya Sharma" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="regEmail">Email Address</label>
+                <input type="email" id="regEmail" placeholder="you@example.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="regPhone">Phone Number</label>
+                <input type="tel" id="regPhone" placeholder="+91 98765 43210" required autocomplete="tel" />
+              </div>
+              <button type="submit" class="btn btn-primary full-width" id="evSubmitBtn">
+                <span class="btn-text">Continue to Payment</span>
+                <span class="btn-icon">◎</span>
+              </button>
+              <p class="form-note">Your information is kept safe and private.</p>
+            </form>
+          </div>
+
+          <!-- Payment Mock -->
+          <div id="evPaymentView" style="display:none;">
+            <div class="ev-modal-header">
+              <div class="ev-modal-circle ev-payment-icon">◎</div>
+              <h3 class="ev-modal-title">Payment</h3>
+              <p class="ev-payment-amount" id="evPaymentAmount"></p>
+            </div>
+            <div class="ev-payment-body">
+              <div class="ev-payment-card">
+                <div class="ev-payment-row">
+                  <span>Event</span>
+                  <strong id="payEventName"></strong>
+                </div>
+                <div class="ev-payment-row">
+                  <span>Amount</span>
+                  <strong id="payAmount"></strong>
+                </div>
+                <div class="ev-payment-row">
+                  <span>Registrant</span>
+                  <strong id="payName"></strong>
+                </div>
+              </div>
+              <p class="ev-payment-note">Razorpay integration coming soon. Click below to simulate payment.</p>
+              <button class="btn btn-primary full-width" id="evPayBtn">
+                <span class="btn-text">Complete Payment (Mock)</span>
+                <span class="btn-icon">◎</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Success -->
+          <div id="evSuccessView" style="display:none;">
+            <div class="ev-success-inner">
+              <div class="ev-success-circle">◎</div>
+              <h3>You're Registered!</h3>
+              <p>A confirmation email has been sent to <strong id="evSuccessEmail"></strong>.</p>
+              <div class="ev-confirmation-card" id="evConfirmationCard">
+                <!-- Injected -->
+              </div>
+              <button class="btn btn-primary" id="evSuccessDone">Back to Events</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo1.png" alt="Big O Minds" class="footer-logo" />
+        <div class="footer-brand-name">Big <span class="footer-o">"O"</span> Minds</div>
+        <p class="footer-tagline">Awareness Expands, Progress Begins.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="events.html">Events</a>
+        <a href="turning-point.html">Turning Point</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Big "O" Minds. All rights reserved.</p>
+        <p class="footer-heart">Made with ◎ for curious minds</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="payment-service.js"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="email-service.js"></script>
+
+  <script src="events-app.js" defer></script>
+</body>
+</html>

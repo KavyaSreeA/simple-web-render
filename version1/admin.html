@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#7ba7bc" />
+  <title>Admin – Big "O" Minds</title>
+  <link rel="icon" type="image/png" href="assets/logo1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════ HEADER ══════════════════════════ -->
+  <header id="header" class="site-header scrolled" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Big O Minds Home">
+        <img src="assets/logo1.png" alt="Big O Minds" class="header-logo-img" />
+        <div class="brand-name">
+          <span class="brand-big">Big </span><span class="brand-o">"O"</span><span class="brand-big"> Minds</span>
+          <span style="font-size:0.65rem;color:var(--clr-slate);margin-left:0.5rem;font-weight:400">Admin</span>
+        </div>
+      </a>
+      <nav class="nav-links" id="mainNav" aria-label="Admin navigation">
+        <a href="index.html" class="nav-link">View Site</a>
+        <a href="events.html" class="nav-link">Events Page</a>
+        <a href="turning-point.html" class="nav-link">Turning Point</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+    <div class="mobile-circle-bg"></div>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-nav-link">View Site</a>
+      <a href="events.html" class="mobile-nav-link">Events Page</a>
+      <a href="turning-point.html" class="mobile-nav-link">Turning Point</a>
+    </nav>
+  </div>
+
+  <!-- ══════════════════════════ ADMIN PANEL ══════════════════════════ -->
+  <main class="admin-main">
+    <div class="container">
+
+      <!-- Auth Gate -->
+      <div id="adminAuth" class="admin-auth">
+        <div class="admin-auth-card">
+          <div class="admin-auth-circle">◎</div>
+          <h2 class="admin-auth-title">Admin Access</h2>
+          <p class="admin-auth-sub">Enter your credentials to continue</p>
+          <form id="adminLoginForm" novalidate>
+            <div class="form-group">
+              <label for="adminUser">Email or Username</label>
+              <input type="text" id="adminUser" placeholder="admin@bigominds.com" required autocomplete="username" />
+            </div>
+            <div class="form-group">
+              <label for="adminPass">Password</label>
+              <input type="password" id="adminPass" placeholder="••••••••" required autocomplete="current-password" />
+            </div>
+            <button type="submit" class="btn btn-primary full-width">
+              <span class="btn-text">Sign In</span>
+              <span class="btn-icon">◎</span>
+            </button>
+            <p class="form-note" id="adminError" style="color:#c0392b;display:none;"></p>
+            <p class="form-note">Use Firebase Auth email, or <strong>admin / bigominds</strong> in dev mode</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Admin Dashboard -->
+      <div id="adminDashboard" style="display:none;">
+        <div class="admin-header-row" style="padding-top:clamp(7rem,10vw,9rem)">
+          <div>
+            <p class="section-eyebrow">Admin Panel</p>
+            <h1 class="section-heading">Manage<br/><em>Your Platform</em></h1>
+          </div>
+          <button class="btn btn-ghost admin-logout" id="adminLogout">Sign Out</button>
+        </div>
+
+        <!-- Tabs -->
+        <div class="admin-tabs">
+          <button class="admin-tab active" data-tab="events">Events</button>
+          <button class="admin-tab" data-tab="journeys">User Journeys</button>
+          <button class="admin-tab" data-tab="registrations">Registrations</button>
+        </div>
+
+        <!-- Tab: Events -->
+        <div class="admin-panel active" id="panelEvents">
+          <div class="admin-panel-header">
+            <h3>All Events</h3>
+            <button class="btn btn-primary" id="adminAddEvent">+ New Event</button>
+          </div>
+          <div class="admin-table-wrap" id="adminEventsTable">
+            <!-- Injected -->
+          </div>
+        </div>
+
+        <!-- Tab: Journeys -->
+        <div class="admin-panel" id="panelJourneys">
+          <div class="admin-panel-header">
+            <h3>User Turning Point Journeys</h3>
+          </div>
+          <div class="admin-table-wrap" id="adminJourneysTable">
+            <!-- Injected -->
+          </div>
+        </div>
+
+        <!-- Tab: Registrations -->
+        <div class="admin-panel" id="panelRegistrations">
+          <div class="admin-panel-header">
+            <h3>Event Registrations</h3>
+          </div>
+          <div class="admin-table-wrap" id="adminRegsTable">
+            <!-- Injected -->
+          </div>
+        </div>
+
+        <!-- Event Form Modal -->
+        <div class="ev-modal-overlay" id="adminEventModal" style="display:none;">
+          <div class="ev-modal admin-event-modal">
+            <button class="ev-modal-close" id="adminEventModalClose" aria-label="Close">✕</button>
+            <div class="ev-modal-header">
+              <div class="ev-modal-circle">◎</div>
+              <h3 class="ev-modal-title" id="adminEventFormTitle">Create Event</h3>
+            </div>
+            <form id="adminEventForm" novalidate>
+              <input type="hidden" id="aeId" value="" />
+              <div class="form-group">
+                <label for="aeTitle">Event Title</label>
+                <input type="text" id="aeTitle" placeholder="e.g. Circle of Awareness Workshop" required />
+              </div>
+              <div class="form-group">
+                <label for="aeDesc">Description</label>
+                <textarea id="aeDesc" rows="4" placeholder="Describe the event experience…" required></textarea>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="aeDate">Date & Time</label>
+                  <input type="datetime-local" id="aeDate" required />
+                </div>
+                <div class="form-group">
+                  <label for="aePrice">Price (₹)</label>
+                  <input type="number" id="aePrice" placeholder="2500" min="0" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="aeLocation">Location</label>
+                <input type="text" id="aeLocation" placeholder="e.g. Grand Hall, Mumbai" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="aeType">Event Type</label>
+                  <input type="text" id="aeType" placeholder="e.g. Family Workshop" />
+                </div>
+                <div class="form-group">
+                  <label for="aeEmoji">Emoji</label>
+                  <input type="text" id="aeEmoji" placeholder="◎" maxlength="4" />
+                </div>
+              </div>
+              <div class="form-group" style="flex-direction:row;align-items:center;gap:0.75rem;">
+                <input type="checkbox" id="aeFeatured" style="width:auto;" />
+                <label for="aeFeatured" style="margin:0;">Featured Event</label>
+              </div>
+              <button type="submit" class="btn btn-primary full-width" id="aeSubmitBtn">
+                <span class="btn-text">Create Event</span>
+                <span class="btn-icon">◎</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo1.png" alt="Big O Minds" class="footer-logo" />
+        <div class="footer-brand-name">Big <span class="footer-o">"O"</span> Minds</div>
+        <p class="footer-tagline">Awareness Expands, Progress Begins.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Big "O" Minds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+
+  <script src="admin-app.js" defer></script>
+</body>
+</html>

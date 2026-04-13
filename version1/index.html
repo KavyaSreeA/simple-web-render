@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Big O Minds – A credible, human-centered coaching platform helping individuals and organizations unlock their potential. ICF Coaching, MBTI/FIRO Assessments, L&D Partnerships, and Purposeful Family Workshops." />
+  <meta name="keywords" content="coaching, ICF coaching, MBTI, FIRO assessment, learning development, personality assessment, self-discovery, mindfulness, Big O Minds" />
+  <meta property="og:title" content="Big O Minds – Awareness Expands, Progress Begins" />
+  <meta property="og:description" content="A safe, relatable partner in your growth journey. Coaching, assessments, and purposeful experiences for individuals, organizations, and families." />
+  <meta property="og:image" content="assets/quote_loader.png" />
+  <meta name="theme-color" content="#7ba7bc" />
+  <title>Big "O" Minds – Awareness Expands, Progress Begins</title>
+  <link rel="icon" type="image/png" href="assets/logo1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════ LOADER ══════════════════════════ -->
+  <div id="loader" role="status" aria-label="Loading Big O Minds">
+    <div class="loader-circle" id="loaderCircle"></div>
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/logo1.png" alt="Big O Minds Logo" class="loader-logo" />
+      </div>
+      <blockquote class="loader-quote">
+        <span class="loader-quote-line">Awareness Expands,</span>
+        <span class="loader-quote-line">Progress Begins.</span>
+      </blockquote>
+      <p class="loader-brand">— Big "O" Minds</p>
+    </div>
+    <div class="loader-ripple r1"></div>
+    <div class="loader-ripple r2"></div>
+    <div class="loader-ripple r3"></div>
+  </div>
+
+  <!-- ══════════════════════════ HEADER ══════════════════════════ -->
+  <header id="header" class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#home" class="brand-logo" aria-label="Big O Minds Home">
+        <img src="assets/logo1.png" alt="Big O Minds" class="header-logo-img" />
+        <div class="brand-name">
+          <span class="brand-big">Big </span><span class="brand-o">"O"</span><span class="brand-big"> Minds</span>
+        </div>
+      </a>
+      <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#outcomes" class="nav-link">Outcomes</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="turning-point.html" class="nav-link">Turning Point</a>
+        <a href="#contact" class="nav-link nav-cta">Let's Talk</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+    <div class="mobile-circle-bg"></div>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#outcomes" class="mobile-nav-link">Outcomes</a>
+      <a href="events.html" class="mobile-nav-link">Events</a>
+      <a href="turning-point.html" class="mobile-nav-link">Turning Point</a>
+      <a href="#contact" class="mobile-nav-link">Let's Talk</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ══════════════════════════ HERO ══════════════════════════ -->
+    <section id="home" class="hero-section" aria-labelledby="heroHeading">
+      <div class="hero-circles">
+        <div class="hero-circle hc1"></div>
+        <div class="hero-circle hc2"></div>
+        <div class="hero-circle hc3"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Welcome to Big "O" Minds</p>
+          <h1 id="heroHeading" class="hero-heading">
+            Where <em>Awareness</em><br/>Opens Every Door
+          </h1>
+          <p class="hero-sub">
+            A safe, credible, and deeply human space for individuals, organizations, and families to explore, evolve, and become their dream version — one insight at a time.
+          </p>
+          <div class="hero-audience">
+            <span class="audience-chip" data-target="individuals">For Individuals</span>
+            <span class="audience-chip" data-target="organizations">For Organizations</span>
+            <span class="audience-chip" data-target="families">For Families</span>
+          </div>
+          <div class="hero-ctas">
+            <a href="turning-point.html" class="btn btn-primary" id="exploreServicesBtn">Find Your Path</a>
+            <a href="#services" class="btn btn-ghost" id="bookSessionBtn">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo-wrap">
+            <div class="photo-ring pr1"></div>
+            <div class="photo-ring pr2"></div>
+            <img src="assets/aa-hero-optimized.jpg" alt="Raj – Founder, Big O Minds" class="hero-photo" loading="eager" />
+          </div>
+          <div class="hero-tagline-pill">
+            <div class="pill-dot"></div>
+            "Awareness Expands, Progress Begins"
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-ring">
+          <div class="scroll-dot"></div>
+        </div>
+        <span>Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ TRUST BAR ══════════════════════════ -->
+    <section class="trust-bar" aria-label="Key credentials">
+      <div class="container trust-inner">
+        <div class="trust-item">
+          <span class="trust-icon">🏅</span>
+          <span>ICF Certified Coach</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true">◦</div>
+        <div class="trust-item">
+          <span class="trust-icon">🧠</span>
+          <span>MBTI & FIRO Practitioner</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true">◦</div>
+        <div class="trust-item">
+          <span class="trust-icon">🏢</span>
+          <span>L&D Partner to Organizations</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true">◦</div>
+        <div class="trust-item">
+          <span class="trust-icon">👨‍👩‍👧</span>
+          <span>Family Experience Facilitator</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ ABOUT ══════════════════════════ -->
+    <section id="about" class="about-section" aria-labelledby="aboutHeading">
+      <div class="container about-inner">
+        <div class="about-photo-col">
+          <div class="about-photo-wrap">
+            <div class="about-circle-accent"></div>
+            <img src="assets/aa-hero-optimized.jpg" alt="Raj – Founder, Big O Minds" class="about-photo" loading="lazy" />
+            <div class="about-badge">
+              <div class="badge-circle-icon">◎</div>
+              <span>ICF Coach<br/>& L&D Expert</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <p class="section-eyebrow">About</p>
+          <h2 id="aboutHeading" class="section-heading">A Journey Rooted in<br/><em>Curiosity & Compassion</em></h2>
+          <p class="about-intro">
+            Big "O" Minds was born from a simple yet profound belief: that every person carries within them an extraordinary potential, waiting to be awakened through awareness.
+          </p>
+          <p class="about-body">
+            As an ICF-certified coach, MBTI & FIRO practitioner, and Learning & Development partner, I've had the privilege of walking alongside hundreds of individuals and teams — helping them move from confusion to clarity, from stagnation to meaningful momentum.
+          </p>
+          <p class="about-body">
+            The "O" in Big O Minds isn't just a letter — it's a <strong>Circle of Awareness</strong>. A reminder that growth is not linear; it's expansive, circular, and deeply personal. There is no judgment here. Only curious exploration and genuine partnership.
+          </p>
+          <div class="about-philosophy">
+            <div class="philosophy-item">
+              <div class="phi-circle">◎</div>
+              <div>
+                <strong>Non-judgmental</strong>
+                <p>Every story deserves space and respect.</p>
+              </div>
+            </div>
+            <div class="philosophy-item">
+              <div class="phi-circle">◎</div>
+              <div>
+                <strong>Evidence-based</strong>
+                <p>Grounded in ICF, MBTI, FIRO frameworks.</p>
+              </div>
+            </div>
+            <div class="philosophy-item">
+              <div class="phi-circle">◎</div>
+              <div>
+                <strong>Human-first</strong>
+                <p>Warmth and empathy guide every session.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary" id="aboutCtaBtn">Begin Your Journey</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ SERVICES ══════════════════════════ -->
+    <section id="services" class="services-section" aria-labelledby="servicesHeading">
+      <div class="services-bg-circle" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">What We Offer</p>
+          <h2 id="servicesHeading" class="section-heading">Services Shaped<br/><em>Around You</em></h2>
+          <p class="section-sub">Each offering is thoughtfully designed to meet you exactly where you are — and gently guide you toward where you want to be.</p>
+        </div>
+        <div class="services-grid">
+
+          <!-- Service 1: L&D -->
+          <article class="service-card" id="service-ld" aria-labelledby="serviceLDTitle">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-o-icon">◎</div>
+                <span class="service-emoji">🏢</span>
+              </div>
+              <div class="service-tag">For Organizations</div>
+              <h3 id="serviceLDTitle" class="service-title">Learning & Development Partnership</h3>
+              <p class="service-desc">Custom L&D solutions that transform how your teams think, collaborate, and grow. From institutional strategy to individual capability building — we craft meaningful development journeys.</p>
+              <ul class="service-features">
+                <li>Custom training programs</li>
+                <li>Team effectiveness workshops</li>
+                <li>Institutional transformation</li>
+                <li>Leadership development</li>
+              </ul>
+              <a href="#contact" class="service-cta" id="ldCtaBtn">Explore L&D Solutions →</a>
+            </div>
+          </article>
+
+          <!-- Service 2: Assessments -->
+          <article class="service-card featured-card" id="service-assess" aria-labelledby="serviceAssessTitle">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-o-icon">◎</div>
+                <span class="service-emoji">🧠</span>
+              </div>
+              <div class="service-tag">For Organizations & Individuals</div>
+              <h3 id="serviceAssessTitle" class="service-title">Personality Assessments</h3>
+              <p class="service-desc">Gain deep, actionable insights into how you think, feel, and connect. Our MBTI and FIRO assessments go beyond labels — they illuminate your unique patterns and open doors to richer relationships.</p>
+              <ul class="service-features">
+                <li>MBTI certified assessment</li>
+                <li>FIRO-B instrument</li>
+                <li>Guided interpretation sessions</li>
+                <li>Team & org-wide reports</li>
+              </ul>
+              <a href="#contact" class="service-cta" id="assessCtaBtn">Discover Your Profile →</a>
+            </div>
+          </article>
+
+          <!-- Service 3: ICF Coaching -->
+          <article class="service-card" id="service-icf" aria-labelledby="serviceICFTitle">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-o-icon">◎</div>
+                <span class="service-emoji">🎯</span>
+              </div>
+              <div class="service-tag">For Organizations & Individuals</div>
+              <h3 id="serviceICFTitle" class="service-title">ICF Coaching</h3>
+              <p class="service-desc">One-on-one and group coaching sessions rooted in ICF standards. A confidential, expansive space for you to explore challenges, set goals, and move forward with clarity and confidence.</p>
+              <ul class="service-features">
+                <li>1:1 personal coaching</li>
+                <li>Group coaching journeys</li>
+                <li>1–2 hours per session</li>
+                <li>Multi-month programs available</li>
+              </ul>
+              <div class="service-cta-group">
+                <a href="#contact" class="service-cta" id="icfCtaBtn">Book a Session →</a>
+                <a href="https://www.letstalkwithraj.com" target="_blank" rel="noopener" class="service-cta-alt" id="rajExternalLink">Visit letstalkwithraj.com ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: Family Workshops -->
+          <article class="service-card" id="service-family" aria-labelledby="serviceFamilyTitle">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-o-icon">◎</div>
+                <span class="service-emoji">👨‍👩‍👧</span>
+              </div>
+              <div class="service-tag">For Families & General Public</div>
+              <h3 id="serviceFamilyTitle" class="service-title">Purposeful Entertainment</h3>
+              <p class="service-desc">Monthly 3-hour workshops where moms, dads, and kids come together for soulful entertainment blended with self-discovery activities. Meaningful moments that connect and inspire.</p>
+              <ul class="service-features">
+                <li>"Mom-Dad-Kid Together" sessions</li>
+                <li>Monthly 3-hour workshops</li>
+                <li>Hotels & community venues</li>
+                <li>Blend of fun + self-discovery</li>
+              </ul>
+              <a href="#events" class="service-cta" id="familyCtaBtn">View Upcoming Events →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ CIRCLE OF AWARENESS ══════════════════════════ -->
+    <section id="outcomes" class="coa-section" aria-labelledby="coaHeading">
+      <div class="container coa-inner">
+
+        <!-- LEFT: Animated Diagram -->
+        <div class="coa-diagram-col" aria-hidden="true">
+          <div class="coa-diagram" id="coaDiagram">
+            <!-- Orbit rings -->
+            <div class="coa-orbit coa-orbit-3"></div>
+            <div class="coa-orbit coa-orbit-2"></div>
+            <div class="coa-orbit coa-orbit-1"></div>
+
+            <!-- Stage nodes -->
+            <div class="coa-node coa-node-top" data-stage="awareness">
+              <div class="coa-node-dot"></div>
+              <span class="coa-node-label">Awareness</span>
+            </div>
+            <div class="coa-node coa-node-right" data-stage="discovery">
+              <div class="coa-node-dot"></div>
+              <span class="coa-node-label">Discovery</span>
+            </div>
+            <div class="coa-node coa-node-bottom" data-stage="growth">
+              <div class="coa-node-dot"></div>
+              <span class="coa-node-label">Growth</span>
+            </div>
+            <div class="coa-node coa-node-left" data-stage="transform">
+              <div class="coa-node-dot"></div>
+              <span class="coa-node-label">Transform</span>
+            </div>
+
+            <!-- Center O -->
+            <div class="coa-center" id="coaCenter">
+              <div class="coa-center-glow"></div>
+              <span class="coa-letter">O</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Text content -->
+        <div class="coa-text-col">
+          <p class="section-eyebrow">Circle of Awareness</p>
+          <h2 id="coaHeading" class="section-heading coa-heading">
+            The <em>key</em> to your potential<br/>is already within you
+          </h2>
+          <blockquote class="coa-quote">
+            "Awareness is the first step.<br/>Everything else follows naturally."
+          </blockquote>
+          <p class="coa-body">
+            The Big O Minds journey moves through four stages — Awareness, Discovery, Growth, and Transformation. Each circle builds on the last, creating a continuous, natural evolution toward your truest self.
+          </p>
+
+          <!-- Interactive stage descriptors -->
+          <div class="coa-stages" id="coaStages">
+            <button class="coa-stage-btn active" data-stage="awareness" id="stageAwareness">
+              <div class="coa-stage-dot"></div>
+              <div class="coa-stage-info">
+                <strong>Awareness</strong>
+                <span>See yourself clearly, without judgment</span>
+              </div>
+            </button>
+            <button class="coa-stage-btn" data-stage="discovery" id="stageDiscovery">
+              <div class="coa-stage-dot"></div>
+              <div class="coa-stage-info">
+                <strong>Discovery</strong>
+                <span>Uncover patterns, strengths, and possibilities</span>
+              </div>
+            </button>
+            <button class="coa-stage-btn" data-stage="growth" id="stageGrowth">
+              <div class="coa-stage-dot"></div>
+              <div class="coa-stage-info">
+                <strong>Growth</strong>
+                <span>Build new habits, skills, and perspectives</span>
+              </div>
+            </button>
+            <button class="coa-stage-btn" data-stage="transform" id="stageTransform">
+              <div class="coa-stage-dot"></div>
+              <div class="coa-stage-info">
+                <strong>Transform</strong>
+                <span>Become the version of yourself you've always known exists</span>
+              </div>
+            </button>
+          </div>
+
+          <a href="#contact" class="btn btn-primary coa-cta-btn" id="coaCtaBtn">Begin Your Circle →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ EVENTS ══════════════════════════ -->
+    <section id="events" class="events-section" aria-labelledby="eventsHeading">
+      <div class="events-circle-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Upcoming Experiences</p>
+          <h2 id="eventsHeading" class="section-heading">Join Us in<br/><em>Purposeful Moments</em></h2>
+          <p class="section-sub">Our workshops are immersive, joyful, and gently transformative. Reserve your spot and experience growth as a shared journey.</p>
+        </div>
+        <div class="events-grid">
+          <div class="event-card featured-event" id="event-family-1">
+            <div class="event-badge">Next Event</div>
+            <div class="event-header-row">
+              <div class="event-emoji">👨‍👩‍👧</div>
+              <div class="event-type">Family Workshop</div>
+            </div>
+            <h3 class="event-title">Mom-Dad-Kid Together</h3>
+            <p class="event-desc">A 3-hour journey of soulful entertainment, storytelling, and self-discovery activities designed to deepen bonds and create joyful memories.</p>
+            <div class="event-meta">
+              <div class="event-meta-item">
+                <span class="meta-label">Duration</span>
+                <span class="meta-val">3 Hours</span>
+              </div>
+              <div class="event-meta-item">
+                <span class="meta-label">Format</span>
+                <span class="meta-val">In-Person</span>
+              </div>
+              <div class="event-meta-item">
+                <span class="meta-label">Venue</span>
+                <span class="meta-val">TBD (Hotels/Community Halls)</span>
+              </div>
+            </div>
+            <a href="events.html" class="btn btn-primary event-btn" id="registerFamilyBtn">View All Events →</a>
+          </div>
+
+          <div class="event-card" id="event-org-1">
+            <div class="event-header-row">
+              <div class="event-emoji">🏢</div>
+              <div class="event-type">Corporate Program</div>
+            </div>
+            <h3 class="event-title">Team Awareness Discovery</h3>
+            <p class="event-desc">A half-day MBTI/FIRO team workshop to uncover team dynamics, communication styles, and build stronger interpersonal connections at work.</p>
+            <div class="event-meta">
+              <div class="event-meta-item">
+                <span class="meta-label">Duration</span>
+                <span class="meta-val">Half Day</span>
+              </div>
+              <div class="event-meta-item">
+                <span class="meta-label">Format</span>
+                <span class="meta-val">In-Person / Virtual</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-ghost event-btn" id="registerOrgBtn">Enquire Now</a>
+          </div>
+
+          <div class="event-card" id="event-individual-1">
+            <div class="event-header-row">
+              <div class="event-emoji">🌱</div>
+              <div class="event-type">Individual Coaching</div>
+            </div>
+            <h3 class="event-title">Personal Growth Intensive</h3>
+            <p class="event-desc">A structured 3-month coaching journey for individuals ready to make meaningful changes. ICF-certified sessions with accountability and deep support.</p>
+            <div class="event-meta">
+              <div class="event-meta-item">
+                <span class="meta-label">Duration</span>
+                <span class="meta-val">3 Months</span>
+              </div>
+              <div class="event-meta-item">
+                <span class="meta-label">Sessions</span>
+                <span class="meta-val">1–2 hrs / session</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-ghost event-btn" id="registerIndividualBtn">Book Discovery Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ TESTIMONIALS ══════════════════════════ -->
+    <section id="testimonials" class="testimonials-section" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Stories of Growth</p>
+          <h2 id="testimonialsHeading" class="section-heading">Voices from the<br/><em>Journey</em></h2>
+        </div>
+        <div class="testimonials-carousel" id="testimonialsCarousel" aria-label="Testimonials">
+          <div class="testimonials-track" id="testimonialsTrack">
+
+            <div class="testimonial-card" role="article" aria-label="Testimonial from Priya">
+              <div class="testi-quote-mark">"</div>
+              <p class="testi-text">Working with Big O Minds was a turning point. I walked in confused about my career and walked out with a clear, calm sense of direction. The coaching felt like a genuine conversation, not a lecture.</p>
+              <div class="testi-author">
+                <div class="testi-avatar" aria-hidden="true">P</div>
+                <div>
+                  <strong>Priya S.</strong>
+                  <span>Individual Coaching Client</span>
+                </div>
+              </div>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+
+            <div class="testimonial-card" role="article" aria-label="Testimonial from Ramesh">
+              <div class="testi-quote-mark">"</div>
+              <p class="testi-text">The MBTI assessment session for our team was eye-opening. We finally understood why we communicate the way we do — and how to bridge those gaps. Our collaboration has improved dramatically.</p>
+              <div class="testi-author">
+                <div class="testi-avatar" aria-hidden="true">R</div>
+                <div>
+                  <strong>Ramesh K.</strong>
+                  <span>HR Director, Tech Company</span>
+                </div>
+              </div>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+
+            <div class="testimonial-card" role="article" aria-label="Testimonial from Ananya">
+              <div class="testi-quote-mark">"</div>
+              <p class="testi-text">The Mom-Dad-Kid workshop was pure magic. My daughter and I laughed, cried, and connected in ways we hadn't in years. I'd recommend this to every family without hesitation.</p>
+              <div class="testi-author">
+                <div class="testi-avatar" aria-hidden="true">A</div>
+                <div>
+                  <strong>Ananya M.</strong>
+                  <span>Family Workshop Participant</span>
+                </div>
+              </div>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+
+            <div class="testimonial-card" role="article" aria-label="Testimonial from Vikram">
+              <div class="testi-quote-mark">"</div>
+              <p class="testi-text">Before coaching, I was productive but exhausted. Now I'm purposeful. Raj helped me see that energy, not time, is the real resource. That shift changed everything for me professionally.</p>
+              <div class="testi-author">
+                <div class="testi-avatar" aria-hidden="true">V</div>
+                <div>
+                  <strong>Vikram L.</strong>
+                  <span>Senior Manager, Finance Sector</span>
+                </div>
+              </div>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+
+            <div class="testimonial-card" role="article" aria-label="Testimonial from Deepa">
+              <div class="testi-quote-mark">"</div>
+              <p class="testi-text">The L&D partnership transformed how our institution approaches people development. It wasn't just training — it was a culture shift. Our teams are more self-aware and resilient than ever.</p>
+              <div class="testi-author">
+                <div class="testi-avatar" aria-hidden="true">D</div>
+                <div>
+                  <strong>Deepa R.</strong>
+                  <span>Principal, Educational Institution</span>
+                </div>
+              </div>
+              <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+
+          </div>
+          <div class="carousel-controls" aria-label="Carousel navigation">
+            <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous testimonial">‹</button>
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Testimonial navigation"></div>
+            <button class="carousel-btn next" id="carouselNext" aria-label="Next testimonial">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ CONTACT ══════════════════════════ -->
+    <section id="contact" class="contact-section" aria-labelledby="contactHeading">
+      <div class="contact-circle-accent" aria-hidden="true"></div>
+      <div class="container contact-inner">
+        <div class="contact-text-col">
+          <p class="section-eyebrow">Get in Touch</p>
+          <h2 id="contactHeading" class="section-heading">Ready to Begin<br/><em>Your Journey?</em></h2>
+          <p class="contact-desc">Whether you're an individual seeking clarity, an organization looking to grow your people, or a family wanting meaningful shared experiences — we'd love to hear from you.</p>
+          <div class="contact-options">
+            <a href="mailto:hello@bigominds.com" class="contact-option" id="emailLink">
+              <div class="contact-option-icon">✉</div>
+              <div>
+                <strong>Email Us</strong>
+                <span>hello@bigominds.com</span>
+              </div>
+            </a>
+            <a href="https://www.letstalkwithraj.com" target="_blank" rel="noopener" class="contact-option" id="rajLink">
+              <div class="contact-option-icon">💬</div>
+              <div>
+                <strong>ICF Coaching Portal</strong>
+                <span>letstalkwithraj.com</span>
+              </div>
+            </a>
+          </div>
+          <div class="contact-quote">
+            <div class="quote-o">◎</div>
+            <p>"The first step is simply to begin. Everything else unfolds from there."</p>
+          </div>
+        </div>
+        <div class="contact-form-col">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input type="text" id="contactName" name="name" placeholder="e.g. Priya Sharma" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactInterest">I'm interested in…</label>
+              <select id="contactInterest" name="interest" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="icf-coaching">ICF Coaching – 1:1</option>
+                <option value="group-coaching">ICF Coaching – Group</option>
+                <option value="mbti-firo">MBTI / FIRO Assessment</option>
+                <option value="ld-partnership">L&D Partnership (Organization)</option>
+                <option value="family-workshop">Family Workshop</option>
+                <option value="general">Just exploring – tell me more</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Your Message <span class="optional">(optional)</span></label>
+              <textarea id="contactMessage" name="message" rows="4" placeholder="Share a little about where you are and where you'd like to go…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width" id="contactSubmitBtn">
+              <span class="btn-text">Send My Message</span>
+              <span class="btn-icon">◎</span>
+            </button>
+            <p class="form-note">We respond within 1 business day. No pressure, no spam.</p>
+          </form>
+          <div class="form-success" id="formSuccess" aria-live="polite" style="display:none;">
+            <div class="success-o">◎</div>
+            <h3>Message Received!</h3>
+            <p>Thank you for reaching out. We'll be in touch within one business day. Your journey has already begun.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo1.png" alt="Big O Minds" class="footer-logo" />
+        <div class="footer-brand-name">Big <span class="footer-o">"O"</span> Minds</div>
+        <p class="footer-tagline">Awareness Expands, Progress Begins.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="events.html">Events</a>
+        <a href="turning-point.html">Turning Point</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.letstalkwithraj.com" target="_blank" rel="noopener">Coaching Portal ↗</a>
+      </nav>
+      <div class="footer-bottom">
+        <p>© 2025 Big "O" Minds. All rights reserved.</p>
+        <p class="footer-heart">Made with ◎ for curious minds</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
